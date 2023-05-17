@@ -22,6 +22,5 @@ def deployImage() {
         sh "ssh -o StrictHostKeyChecking=no ec2-user@52.56.46.176 ${dockerCmd}"
 
     }
-    
 } 
 return this
