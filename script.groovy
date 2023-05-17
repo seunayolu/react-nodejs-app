@@ -1,11 +1,11 @@
 def buildImage() {
     echo "Build Docker Image with Dockerfile..."
-    withCredentials([usernamePassword(credentialsId: 'Docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        sh 'docker build -t oluwaseuna/demo-app:react-nodejs-app .'
+    //withCredentials([usernamePassword(credentialsId: 'Docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+    sh 'docker build -t oluwaseuna/demo-app:react-nodejs-app .'
         //sh "echo $PASS | docker login -u $USER --password-stdin"
         //sh 'docker push oluwaseuna/demo-app:react-nodejs-app'
-    }
-} 
+}
+
 
 def pushImage() {
     echo "Pushing Docker Image to Docker Hub Repo..."
